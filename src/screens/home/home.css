@@ -1,0 +1,11 @@
+.home_screen_wrap {
+  background-image: linear-gradient(to bottom, #af9cf300, #af9cf3);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
