@@ -1,3 +1,3 @@
-import question_4 from './question_4.png';
+import question from '../logo.svg';
 
-export { question_4 };
+export { question };
