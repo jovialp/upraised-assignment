@@ -7,11 +7,11 @@ import { logo } from '../../assets';
 const Home = () => {
   return (
     <div className="home_screen_wrap">
-      <div className="home_screen_logo">
-        <img src={logo} alt="logo" className="" />
+      <img src={logo} alt="logo" className="home_screen_logo" />
+      <div className="home_screen_body">
+        <h2 className="home_screen_title">Quiz</h2>
       </div>
-      <div className="home_screen_body">body</div>
-      <div className="home_screen_start">start</div>
+      <button className="home_screen_start">Start</button>
     </div>
   );
 };
