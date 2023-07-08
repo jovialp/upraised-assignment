@@ -11,6 +11,9 @@
   height: 60px;
   position: relative;
 }
+.button_primary:disabled {
+  cursor: not-allowed;
+}
 
 .button_icon {
   position: absolute;

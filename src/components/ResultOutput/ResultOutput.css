@@ -13,13 +13,13 @@
 
 .result_count {
   font-family: Source Sans Pro;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0px;
   text-align: left;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   align-items: center;
 }
 

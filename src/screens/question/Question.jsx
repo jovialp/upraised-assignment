@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 import './question.css';
 
 // Assets
 import { questionTopBanner, arrowIcon } from '../../assets';
-import { QUESTIONS } from '../../constants/questions';
 
 // Components
 import TopBanner from '../../components/topBanner/TopBanner';
@@ -14,27 +13,54 @@ import QuestionTitle from '../../components/questionTitle/QuestionTitle';
 import Option from '../../components/option/Option';
 import Button from '../../components/button/Button';
 
+// Context
+import { AppContext } from '../../AppContext';
+
+// Service
+import postQuestionAnswerService from '../../services/postQuestionAnswerService'
+
 const Question = () => {
-  const [questions, setQuestions] = useState(QUESTIONS);
   const [selectedOptionId, setSelectedOptionId] = useState();
+
+  const { questions, totalQuestionCount, addOneToCorrectAnswerCount, addOneToIncorrectAnswerCount } = useContext(AppContext);
 
   const params = useParams();
 
   const navigate = useNavigate();
 
   const currentQuestionNumber = params?.id ? parseInt(params?.id) : 0;
-  const currentQuestionDetails = questions[currentQuestionNumber];
+  const currentQuestionDetails = questions?.[currentQuestionNumber-1];
 
   const onSelectOption = (id) => {
     setSelectedOptionId(id);
   };
 
 
-  const onNextButtonClick = () => {
-    navigate('/result', { replace: true });
+  const onNextButtonClick = async () => {
+      const response= await postQuestionAnswerService({questionId: currentQuestionDetails?.id, answerId :selectedOptionId});
+
+      if(response) {
+        if(response.isCorrect){
+          addOneToCorrectAnswerCount();
+        } else {
+          addOneToIncorrectAnswerCount()
+        }
+        setSelectedOptionId();
+        if(currentQuestionNumber < totalQuestionCount) {
+          navigate(`/question/${currentQuestionNumber+1}`, { replace: true });
+        } else{
+
+        navigate('/result', { replace: true });
+        }
+      }
   };
 
-
+  useEffect(() => {
+    if (totalQuestionCount === 0) {
+      navigate('/', { replace: true });
+    }
+  }, [totalQuestionCount]);
+  
   return (
     <div className="question_screen_wrap">
       
@@ -64,7 +90,12 @@ const Question = () => {
         </div>
 
         <div className="next_button_wrap">
-          <Button className="next_button" text={'Next'} action={onNextButtonClick} icon={arrowIcon} />
+          <Button 
+            className="next_button" 
+            text={currentQuestionNumber < totalQuestionCount ? 'Next' : 'Submit'} 
+            action={onNextButtonClick} icon={arrowIcon}
+            disabled={isNaN( selectedOptionId)}
+          />
         </div>
       </div>
     </div>

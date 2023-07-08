@@ -1,12 +1,12 @@
 .result_meter_round {
   border-radius: 50%;
-  background: radial-gradient(white 60%, transparent 51%),
+  background: radial-gradient(white 66%, transparent 51%),
     conic-gradient(transparent 0deg 180deg, white 180deg),
     conic-gradient(#ff3b3f 0deg, #ffd033 90deg, #44b77b 180deg);
   transform: rotate(-90deg);
   stroke-linecap: round;
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   display: flex;
   align-items: center;
 }
@@ -17,10 +17,9 @@
     conic-gradient(transparent 0deg 240deg, white 240deg),
     conic-gradient(#ebedf5 0deg, #ebedf5 240deg);
   transform: rotate(-30deg);
-  stroke-linecap: round;
   width: 215px;
   height: 215px;
-  margin-left: 19px;
+  margin-left: 8px;
   display: flex;
   align-items: center;
   justify-content: center;

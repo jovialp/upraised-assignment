@@ -3,9 +3,13 @@ import React from 'react';
 // Style
 import './Button.css';
 
-const Button = ({ text, action, className, icon }) => {
+const Button = ({ text, action, className, icon, disabled }) => {
   return (
-    <button className={`button_primary ${className}`} onClick={action}>
+    <button
+      className={`button_primary ${className}`}
+      onClick={action}
+      disabled={disabled}
+    >
       {text}
       {icon && (
         <span>
