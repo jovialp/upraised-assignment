@@ -36,16 +36,9 @@
 }
 
 .home_screen_start {
-  width: 315px;
-  height: 40px;
+  max-width: 750px;
+  min-width: 90px;
+  width: 80%;
   top: 20px;
   left: 20px;
-  border-radius: 20px;
-  background-color: #ff3b3f;
-  font-family: Nunito;
-  font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 0px;
-  color: #ffffff;
-  border: none;
 }

@@ -4,6 +4,7 @@
   padding: 20px;
   display: flex;
   border-radius: 10px;
+  gap: 20px;
 }
 .option_wrap_selected {
   border: 2px solid #44b77b;
@@ -16,4 +17,8 @@
   line-height: 45px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.option_svg {
+  width: 24px;
 }

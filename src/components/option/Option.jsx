@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // Style
 import './Option.css';
 
 // Assets
-import { questionTopBanner } from '../../assets';
+import { selectedOption, option } from '../../assets';
 
 const Option = ({ id, text, selected, onSelectAction }) => {
   return (
@@ -14,7 +14,11 @@ const Option = ({ id, text, selected, onSelectAction }) => {
         onSelectAction(id);
       }}
     >
-      
+      <img
+        src={selected ? selectedOption : option}
+        alt={`option-select-${id}`}
+        className="option_svg"
+      />
       <div className={'option_text'}>{text}</div>
     </div>
   );

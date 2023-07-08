@@ -6,6 +6,9 @@ import './home.css';
 import { logo } from '../../assets';
 import { QUESTIONS } from '../../constants/questions';
 
+// Components
+import Button from '../../components/button/Button';
+
 const Home = () => {
   const [questions, setQuestions] = useState();
 
@@ -20,9 +23,12 @@ const Home = () => {
       <div className="home_screen_body">
         <h2 className="home_screen_title">Quiz</h2>
       </div>
-      <button className="home_screen_start" onClick={getQuestions}>
-        Start
-      </button>
+
+      <Button
+        className="home_screen_start"
+        text={'Start'}
+        action={getQuestions}
+      />
     </div>
   );
 };

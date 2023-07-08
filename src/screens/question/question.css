@@ -29,3 +29,21 @@
 .question_title {
   margin-top: 60px;
 }
+
+.question_options {
+  margin-bottom: 90px;
+}
+
+.next_button_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  max-width: 750px;
+  bottom: 20px;
+}
+
+.next_button {
+  width: 80%;
+}

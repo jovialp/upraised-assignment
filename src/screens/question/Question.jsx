@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import './question.css';
 
 // Assets
-import { questionTopBanner } from '../../assets';
+import { questionTopBanner, arrowIcon } from '../../assets';
 import { QUESTIONS } from '../../constants/questions';
 
 // Components
@@ -12,6 +12,7 @@ import TopBanner from '../../components/topBanner/TopBanner';
 import ProgressCircle from '../../components/progressCircle/ProgressCircle';
 import QuestionTitle from '../../components/questionTitle/QuestionTitle';
 import Option from '../../components/option/Option';
+import Button from '../../components/button/Button';
 
 const Question = () => {
   const [questions, setQuestions] = useState(QUESTIONS);
@@ -25,6 +26,12 @@ const Question = () => {
   const onSelectOption = (id) => {
     setSelectedOptionId(id);
   };
+
+
+  const onNextButtonClick = () => {
+
+  };
+
 
   return (
     <div className="question_screen_wrap">
@@ -52,6 +59,10 @@ const Question = () => {
               />
             );
           })}
+        </div>
+
+        <div className="next_button_wrap">
+          <Button className="next_button" text={'Next'} action={onNextButtonClick} icon={arrowIcon} />
         </div>
       </div>
     </div>
