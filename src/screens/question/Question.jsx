@@ -1,30 +1,58 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+
 import './question.css';
 
 // Assets
 import { questionTopBanner } from '../../assets';
 import { QUESTIONS } from '../../constants/questions';
+
+// Components
+import TopBanner from '../../components/topBanner/TopBanner';
 import ProgressCircle from '../../components/progressCircle/ProgressCircle';
+import QuestionTitle from '../../components/questionTitle/QuestionTitle';
+import Option from '../../components/option/Option';
 
 const Question = () => {
   const [questions, setQuestions] = useState(QUESTIONS);
+  const [selectedOptionId, setSelectedOptionId] = useState();
 
-  const getQuestions = () => {
-    setQuestions(QUESTIONS);
+  const params = useParams();
+
+  const currentQuestionNumber = params?.id ? parseInt(params?.id) : 0;
+  const currentQuestionDetails = questions[currentQuestionNumber];
+
+  const onSelectOption = (id) => {
+    setSelectedOptionId(id);
   };
 
   return (
     <div className="question_screen_wrap">
-      <div>
-        <img
-          src={questionTopBanner}
-          alt="logo"
-          className="question_screen_top_banner"
-        />
-      </div>
+      
+      <TopBanner src={questionTopBanner} />
 
       <div className="question_screen_body">
-        <ProgressCircle current={1} total={5} />
+        <div className="question_progress_circle_wrap">
+          <div className="question_progress_circle">
+            <ProgressCircle current={currentQuestionNumber} total={5} />
+          </div>
+        </div>
+        
+        <QuestionTitle title={currentQuestionDetails?.question} className={} />
+
+        <div className="question_options">
+          {currentQuestionDetails?.options?.map((option, id) => {
+            return (
+              <Option
+                key={id}
+                id={id}
+                text={option}
+                selected={id === selectedOptionId}
+                onSelectAction={onSelectOption}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

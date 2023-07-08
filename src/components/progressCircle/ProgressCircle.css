@@ -1,15 +1,13 @@
-.step_count_wrap {
-  height: 70px;
-  position: absolute;
-  top: 20px;
-
+.progress_circle_wrap {
+  background-color: #fff;
+  border-radius: 50%;
   /* background: radial-gradient(white 50%, transparent 51%),
     conic-gradient(transparent 0deg 360deg, gainsboro 220deg 360deg),
     conic-gradient(#44B77B 0deg, #44B77B ); */
   /* width: 120px;
   height: 120px; */
 }
-.step_count_counter {
+.progress_circle_counter {
   font-family: Nunito;
   font-size: 16px;
   font-style: italic;
@@ -18,7 +16,7 @@
   letter-spacing: 0px;
   text-align: center;
 }
-.step_count_current_step {
+.progress_circle_current_step {
   font-family: Nunito;
   font-size: 48px;
   font-style: italic;
@@ -28,11 +26,11 @@
   text-align: center;
 }
 
-.circle-background {
+.progress_circle_background {
   fill: #fff;
   stroke: #ddd;
 }
-.circle-progress {
+.progress_circle_progress {
   fill: none;
   stroke: #44b77b;
   stroke-linecap: round;
