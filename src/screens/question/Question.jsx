@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import './question.css';
 
@@ -20,6 +20,8 @@ const Question = () => {
 
   const params = useParams();
 
+  const navigate = useNavigate();
+
   const currentQuestionNumber = params?.id ? parseInt(params?.id) : 0;
   const currentQuestionDetails = questions[currentQuestionNumber];
 
@@ -29,7 +31,7 @@ const Question = () => {
 
 
   const onNextButtonClick = () => {
-
+    navigate('/result', { replace: true });
   };
 
 

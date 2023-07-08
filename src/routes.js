@@ -2,6 +2,7 @@ import React from 'react';
 
 import Home from './screens/home/Home';
 import Question from './screens/question/Question';
+import Result from './screens/result/Result';
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
   {
     path: '/question/:id',
     element: <Question />,
+  },
+  {
+    path: '/result',
+    element: <Result />,
   },
 ];
 
