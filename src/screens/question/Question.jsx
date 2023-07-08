@@ -4,7 +4,7 @@ import './question.css';
 // Assets
 import { questionTopBanner } from '../../assets';
 import { QUESTIONS } from '../../constants/questions';
-import StepCount from '../../components/StepCount/StepCount';
+import ProgressCircle from '../../components/progressCircle/ProgressCircle';
 
 const Question = () => {
   const [questions, setQuestions] = useState(QUESTIONS);
@@ -24,7 +24,7 @@ const Question = () => {
       </div>
 
       <div className="question_screen_body">
-        <StepCount current={1} total={5} />
+        <ProgressCircle current={1} total={5} />
       </div>
     </div>
   );
