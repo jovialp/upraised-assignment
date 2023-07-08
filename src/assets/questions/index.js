@@ -1,3 +1,3 @@
-import question from './question3.png';
+import question_4 from './question_4.png';
 
 export { question };

@@ -1,0 +1,41 @@
+.step_count_wrap {
+  /* background-color: #fff; */
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  width: 70px;
+  height: 70px;
+
+  /* background: radial-gradient(white 50%, transparent 51%),
+    conic-gradient(transparent 0deg 360deg, gainsboro 220deg 360deg),
+    conic-gradient(#44B77B 0deg, #44B77B ); */
+  /* width: 120px;
+  height: 120px; */
+}
+.step_count_inner {
+  border: 2px solid;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step_count_counter {
+  font-family: Nunito;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 96px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.step_count_current_step {
+  font-family: Nunito;
+  font-size: 96px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 96px;
+  letter-spacing: 0px;
+  text-align: center;
+}
