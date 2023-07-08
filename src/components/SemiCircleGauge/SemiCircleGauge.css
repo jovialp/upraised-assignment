@@ -46,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px 15px #eaedf5;
 }
 .result_meter_round5 {
   border-radius: 50%;

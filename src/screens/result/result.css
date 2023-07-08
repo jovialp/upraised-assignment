@@ -15,3 +15,13 @@
   position: relative;
   overflow: hidden;
 }
+
+.result_button_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  max-width: 750px;
+  bottom: 20px;
+}

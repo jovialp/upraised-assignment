@@ -10,6 +10,7 @@ import { questionTopBanner } from '../../assets';
 import TopBanner from '../../components/topBanner/TopBanner';
 import SemiCircleGauge from '../../components/SemiCircleGauge/SemiCircleGauge';
 import ResultOutput from '../../components/ResultOutput/ResultOutput';
+import Button from '../../components/button/Button';
 
 const Result = () => {
   return (
@@ -25,9 +26,17 @@ const Result = () => {
           <SemiCircleGauge percentage={75} />
         </div>
 
-        <ResultOutput count={3} isTrue={true} />
-        <ResultOutput count={2} isTrue={false} />
+        <ResultOutput count={3} isCorrect={true} />
+        <ResultOutput count={2} isCorrect={false} />
+
         
+      <div className="result_button_wrap">
+          <Button
+            className="next_button"
+            text={'Start Again'}
+            action={}
+          />
+      </div>
       </div>
     </div>
   );
