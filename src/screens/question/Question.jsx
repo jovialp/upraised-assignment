@@ -12,6 +12,7 @@ import ProgressCircle from "../../components/progressCircle/ProgressCircle";
 import QuestionTitle from "../../components/questionTitle/QuestionTitle";
 import Option from "../../components/option/Option";
 import Button from "../../components/button/Button";
+import QustionImage from "../../components/qustionImage/QustionImage";
 
 // Context
 import { AppContext } from "../../AppContext";
@@ -78,7 +79,13 @@ const Question = () => {
           </div>
         </div>
 
-        <QuestionTitle title={currentQuestionDetails?.question} className="" />
+        <QuestionTitle title={currentQuestionDetails?.question} />
+
+        {currentQuestionDetails?.image ? (
+          <QustionImage src={currentQuestionDetails.image} />
+        ) : (
+          ""
+        )}
 
         <div className="question_options">
           {currentQuestionDetails?.options?.map((option, id) => {

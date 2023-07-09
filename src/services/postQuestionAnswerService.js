@@ -2,7 +2,6 @@
 import { ANSWERS } from '../constants/questions';
 
 const postQuestionAnswerService = async ({ questionId, answerId }) => {
-  console.log({ questionId, answerId });
   // dummy api call
   return new Promise((resolve) =>
     setTimeout(
