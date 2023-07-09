@@ -1,3 +1,3 @@
 # upraised-assignment
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/stackblitz-starters-ve6w4q)
+[View on vercel ⚡️](https://upraised-assignment-pearl.vercel.app/)
