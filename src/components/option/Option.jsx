@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
 // Style
-import './Option.css';
+import "./Option.css";
 
 // Assets
-import { selectedOption, option } from '../../assets';
+import { selectedOption, option } from "../../assets";
 
 const Option = ({ id, text, selected, onSelectAction }) => {
   return (
     <div
-      className={`option_wrap ${selected ? 'option_wrap_selected' : ''}`}
+      className={`option_wrap ${selected ? "option_wrap_selected" : ""}`}
       onClick={() => {
         onSelectAction(id);
       }}
@@ -19,7 +19,7 @@ const Option = ({ id, text, selected, onSelectAction }) => {
         alt={`option-select-${id}`}
         className="option_svg"
       />
-      <div className={'option_text'}>{text}</div>
+      <div className={"option_text"}>{text}</div>
     </div>
   );
 };

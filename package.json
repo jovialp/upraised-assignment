@@ -2,7 +2,6 @@
   "name": "stackblitz-starters-ve6w4q",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "gauge-chart": "^1.0.0",
     "react": "18.2.0",

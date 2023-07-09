@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 // Style
-import './QuestionTitle.css';
+import "./QuestionTitle.css";
 
-const QuestionTitle = ({title, className}) => {
+const QuestionTitle = ({ title, className }) => {
   return <div className={`question_title ${className}`}>{title}</div>;
 };
 

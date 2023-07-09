@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import { gaugeChart } from 'gauge-chart';
+import React, { useRef, useEffect } from "react";
+import { gaugeChart } from "gauge-chart";
 
 // Style
-import './SemiCircleGauge.css';
+import "./SemiCircleGauge.css";
 
 const SemiCircleGauge = ({ percentage }) => {
   const chart = useRef(null);
@@ -10,12 +10,12 @@ const SemiCircleGauge = ({ percentage }) => {
   useEffect(() => {
     let gaugeOptions = {
       hasNeedle: true,
-      needleColor: '#1E1E28',
+      needleColor: "#1E1E28",
       needleUpdateSpeed: 1000,
-      arcColors: ['rgba(0, 0, 0,0)', 'rgba(0, 0, 0,0)'],
+      arcColors: ["rgba(0, 0, 0,0)", "rgba(0, 0, 0,0)"],
       // arcDelimiters: [percentage],
       // rangeLabel: ['0', '100'],
-      centralLabel: ' ',
+      centralLabel: " ",
     };
 
     gaugeChart(chart.current, 300, gaugeOptions).updateNeedle(percentage);

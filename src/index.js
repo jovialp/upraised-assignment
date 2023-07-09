@@ -16,7 +16,7 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <AppContextWrapper >
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AppContextWrapper>
   </StrictMode>
 );

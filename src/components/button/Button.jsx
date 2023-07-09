@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 // Style
-import './Button.css';
+import "./Button.css";
 
 const Button = ({ text, action, className, icon, disabled }) => {
   return (

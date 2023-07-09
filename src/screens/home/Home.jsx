@@ -1,16 +1,16 @@
-import React, { useContext, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './home.css';
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "./home.css";
 
 // Assets
-import { logo } from '../../assets';
-import getQuestionService from '../../services/getQuestionService';
+import { logo } from "../../assets";
+import getQuestionService from "../../services/getQuestionService";
 
 // Components
-import Button from '../../components/button/Button';
+import Button from "../../components/button/Button";
 
 // Context
-import { AppContext } from '../../AppContext';
+import { AppContext } from "../../AppContext";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ const Home = () => {
     setTotalQuestionCount(responseData?.length || 0);
 
     if (responseData?.length > 0) {
-      navigate('/question/1', { replace: true });
+      navigate("/question/1", { replace: true });
     }
   };
 
@@ -37,7 +37,7 @@ const Home = () => {
 
       <Button
         className="home_screen_start"
-        text={'Start'}
+        text={"Start"}
         action={getQuestions}
       />
     </div>
