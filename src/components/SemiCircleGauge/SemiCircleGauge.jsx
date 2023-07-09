@@ -10,7 +10,7 @@ const SemiCircleGauge = ({ percentage }) => {
   useEffect(() => {
     let gaugeOptions = {
       hasNeedle: true,
-      needleColor: 'gray',
+      needleColor: '#1E1E28',
       needleUpdateSpeed: 1000,
       arcColors: ['rgba(0, 0, 0,0)', 'rgba(0, 0, 0,0)'],
       // arcDelimiters: [percentage],
